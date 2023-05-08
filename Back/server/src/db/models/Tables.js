@@ -16,6 +16,10 @@ const TablesScheme = new mongoose.Schema(
         autopopulate: true,
       },
     ],
+
+    capacity: {
+      type: Number,
+    },
   },
   {
     versionKey: false,
