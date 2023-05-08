@@ -11,6 +11,6 @@ server.use(cors());
 server.use(bodyParser.json({ limit: '50mb' }));
 server.use(morgan('dev'));
 
-// server.use('/', routes);
+server.use('/', routes);
 
 module.exports = server;
