@@ -13,6 +13,9 @@ const UsersScheme = new mongoose.Schema(
         description:{
             type: String
         },
+        rating:{
+            type: Number
+        },
         posts:[{
             type: mongoose.Schema.Types.ObjectId, ref:'Posts', autopopulate: true
         }],

@@ -17,6 +17,9 @@ const postScheme = new mongoose.Schema({
     cost:{
         type: Number
     },
+    rating:{
+        type: Number
+    },
     authorUser:[{type: mongoose.Schema.Types.ObjectId, ref: 'Users', autopopulate: true}],
     authorRest:[{type: mongoose.Schema.Types.ObjectId, ref: 'Restaurants', autopopulate: true}]
 })

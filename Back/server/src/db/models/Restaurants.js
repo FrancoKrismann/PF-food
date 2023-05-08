@@ -14,6 +14,9 @@ const restaurantsScheme = new mongoose.Schema({
     addres:{
         type: String
     },
+    rating:{
+        type: Number
+    },
     menu:[{type: mongoose.Schema.Types.ObjectId, ref:'Posts', autopopulate: true}],
 
     tables:[{type: mongoose.Schema.Types.ObjectId, ref:'Tables', autopopulate: true}]
