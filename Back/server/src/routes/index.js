@@ -1,12 +1,12 @@
 const { Router } = require("express");
 
-const clientsRoutes = require("./clientsRoutes/index");
+const usersRoutes = require("./usersRoutes/index");
 const postsRoutes = require("./postsRoutes/index");
 const restaurantsRoutes = require("./restaurantsRoutes/index");
 
 const router = Router();
 
-router.use("/clients", clientsRoutes);
+router.use("/users", usersRoutes);
 router.use("/posts", postsRoutes);
 router.use("/restaurants", restaurantsRoutes);
 
