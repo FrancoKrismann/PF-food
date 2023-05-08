@@ -25,6 +25,6 @@ const TablesScheme = new mongoose.Schema(
   }
 );
 
-CursosScheme.plugin(require("mongoose-autopopulate"));
+TablesScheme.plugin(require("mongoose-autopopulate"));
 
 module.exports = mongoose.model("Tables", TablesScheme);

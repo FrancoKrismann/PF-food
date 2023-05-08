@@ -16,19 +16,18 @@ const UsersScheme = new mongoose.Schema(
         rating:{
             type: Number
         },
-        posts:[{
-            type: mongoose.Schema.Types.ObjectId, ref:'Posts', autopopulate: true
-        }],
+        posts:{
+            type:[ mongoose.Schema.Types.ObjectId], ref:'Posts', autopopulate: true, default:[]
+        },
         table:{
-            type: mongoose.Schema.Types.ObjectId, ref:'Tables', autopopulate: true
+            type: mongoose.Schema.Types.ObjectId, ref:'Tables', autopopulate: true, default:null
         }
     },
     {
         versionKey: false,
     }
 )
-
-CursosScheme.plugin(mongoosePaginate) 
-CursosScheme.plugin( require('mongoose-autopopulate') ) 
+UsersScheme.plugin(mongoosePaginate) 
+UsersScheme.plugin( require('mongoose-autopopulate') ) 
 
 module.exports = mongoose.model('Users',UsersScheme)
