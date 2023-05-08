@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const mongoosePaginate = require("mongoose-paginate-v2");
 
 const TablesScheme = new mongoose.Schema(
   {
@@ -26,7 +25,6 @@ const TablesScheme = new mongoose.Schema(
   }
 );
 
-CursosScheme.plugin(mongoosePaginate);
 CursosScheme.plugin(require("mongoose-autopopulate"));
 
 module.exports = mongoose.model("Tables", TablesScheme);
